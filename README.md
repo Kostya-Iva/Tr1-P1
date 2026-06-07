@@ -41,11 +41,11 @@ Such architecture is described with one file, named: *stany.ino* written in the 
 
 #### State Descriptions:
 
-* **`STATE_IDLE`** Remains stationary with all motors locked or holding position, actively polling the `START` button pin.
+* **`STATE_IDLE`** Remains stationary, actively polling the `START` button pin.
   
-* **`STATE_HOMING`** Triggered immediately after pressing START. The system drives the X, Y, and Z axes sequentially towards their hardware limit switches to accurately establish the machine's absolute reference point.
+* **`STATE_HOMING`** Triggered after pressing START. Establishing the machine's absolute reference point.
   
-* **`STATE_READY`** The homing sequence has concluded successfully. The parallel effector is calibrated at its home base, actively polling the `START` button pin.
+* **`STATE_READY`** The homing was successfull. The parallel effector is calibrated at its home base, actively polling the `START` button pin.
   
 * **`STATE_PROCESSING`** The system dynamically generates step pulses for all three axes simultaneously, executing predefined movement trajectory
   
